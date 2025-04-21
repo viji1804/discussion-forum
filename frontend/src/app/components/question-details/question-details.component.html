@@ -1,0 +1,23 @@
+<mat-card *ngIf="question">
+  <mat-card-title>{{ question.title }}</mat-card-title>
+  <mat-card-subtitle>Tags: {{ question.tags || 'None' }}</mat-card-subtitle>
+  <mat-card-content>
+    <p>{{ question.description }}</p>
+  </mat-card-content>
+</mat-card>
+
+<h3>Answers</h3>
+<div *ngIf="answers.length; else noAnswers">
+  <mat-card *ngFor="let answer of answers" class="answer-card">
+    <mat-card-content>
+      <p>{{ answer.answer_text }}</p>
+      <app-like-button [answerId]="answer.id" [likes]="answer.likes"></app-like-button>
+    </mat-card-content>
+  </mat-card>
+</div>
+
+<ng-template #noAnswers>
+  <p>No answers yet. Be the first to answer!</p>
+</ng-template>
+
+<app-answer-form [questionId]="questionId"></app-answer-form>

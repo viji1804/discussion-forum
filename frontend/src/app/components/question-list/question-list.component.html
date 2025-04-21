@@ -1,0 +1,22 @@
+<h2 class="section-title">All Questions</h2>
+
+
+<!-- Add Post Question Button -->
+<button mat-raised-button color="primary" [routerLink]="['/questions/new']">
+  Post Question
+</button>
+
+<mat-form-field class="full-width" appearance="outline">
+  <mat-label>Search</mat-label>
+  <input matInput [(ngModel)]="searchQuery" (input)="filterQuestions()" placeholder="Search by keyword or tag" />
+</mat-form-field>
+
+<div *ngFor="let question of filteredQuestions">
+  <mat-card class="question-card" (click)="viewQuestion(question.id)">
+    <mat-card-title>{{ question.title }}</mat-card-title>
+    <mat-card-subtitle>Tags: {{ question.tags || 'None' }}</mat-card-subtitle>
+    <mat-card-content>
+      <p>{{ question.description | slice:0:100 }}...</p>
+    </mat-card-content>
+  </mat-card>
+</div>

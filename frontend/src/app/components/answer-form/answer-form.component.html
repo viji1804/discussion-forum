@@ -1,0 +1,11 @@
+<h4>Post an Answer</h4>
+<mat-form-field class="full-width" appearance="outline">
+  <textarea
+    matInput
+    placeholder="Your answer..."
+    [(ngModel)]="answerText"
+    rows="4"
+    name="answerText"
+  ></textarea>
+</mat-form-field>
+<button mat-raised-button color="accent" (click)="submitAnswer()">Submit Answer</button>
