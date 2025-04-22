@@ -30,7 +30,7 @@ A full-stack discussion forum web application where users can post questions, an
 ---
 
 ## 📁 Project Structure
-
+```pgsql
 discussion-forum/
 ├── backend/                         # Backend - Node.js (TypeScript)
 │   ├── src/
@@ -70,7 +70,7 @@ discussion-forum/
 ├── README.md
 └── SQL/
     └── schema.sql                   # MySQL schema for DB setup
-
+```
 ## ⚙️ Setup Instructions
 
 ### 1️⃣ Clone the Repository
