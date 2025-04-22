@@ -1,52 +1,46 @@
-/* styles.css */
-
+@import "~@angular/material/prebuilt-themes/indigo-pink.css";
+:root{
+  --primary:rgb(65, 44, 65);
+}
 body {
-  margin: 0;
   font-family: 'Roboto', sans-serif;
-  background-color: #f5f5f5;
+  margin: 0;
+  background-color: #f9f9f9;
 }
-body {
-  background-color: #f5f6fa;
+
+h1, h2, h3 {
+  margin-bottom: 12px;
 }
 
 .container {
-  max-width: 1000px;
-  margin: 0 auto;
-  padding: 24px;
+  max-width: 100%; /* or increase to match your layout need */
+  margin: auto;
+  padding: 20px;
 }
 
-.mat-toolbar {
-  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
-  font-weight: 500;
-  font-size: 18px;
-}
 
-.container {
-  max-width: 960px;
-  margin: 40px auto;
-  padding: 0 20px;
+.bg-primary{
+  background-color: var(--primary)!important;
 }
-
-button {
-  border-radius: 8px;
-  text-transform: none;
-  font-weight: 500;
+.text-white{
+  color: white !important;;
 }
-
-mat-card {
-  border-radius: 16px;
-  box-shadow: 0 4px 20px rgba(0,0,0,0.05);
-  padding: 16px;
-  background-color: #ffffff;
+.flex{
+  display: flex;
+  align-items: flex-start;
+  /* gap:3rem */
 }
-
-mat-card-title {
-  font-size: 20px;
-  font-weight: bold;
-  color: #2c3e50;
+.form{
+  flex: 1 1 45% !important;
+  /* align-self: center; */
+  padding: 1rem 3rem;
 }
-
-mat-card-subtitle {
-  color: #7f8c8d;
-  font-size: 14px;
+.form-img{
+ flex: 1 1 50%!important;
+}
+.form-img img{
+  width: 100%;
+  height: 100dvh;
+  /* ascpect-ratio:1/1
+   */
 }
