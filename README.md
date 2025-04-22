@@ -103,11 +103,14 @@ npm install
 ng serve
 ```
 
-🔗 API Endpoints
-Method | Endpoint                | Description
-GET    | /questions              | Get all questions
-POST   | /questions              | Add a new question
-POST   | /answers/:questionId    | Answer a question
-PUT    | /answers/:answerId/like | Like or unlike an answer
+### 📌 API Endpoints
+
+| Method | Endpoint                      | Description              |
+|--------|-------------------------------|--------------------------|
+| GET    | `/questions`                  | Get all questions        |
+| POST   | `/questions`                  | Add a new question       |
+| POST   | `/answers/:questionId`        | Answer a question        |
+| PUT    | `/answers/:answerId/like`     | Like or unlike an answer |
+
 
 
